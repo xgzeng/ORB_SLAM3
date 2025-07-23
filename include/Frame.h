@@ -20,12 +20,12 @@
 #ifndef FRAME_H
 #define FRAME_H
 
-#include<vector>
+#include <vector>
 
-#include "Thirdparty/DBoW2/DBoW2/BowVector.h"
-#include "Thirdparty/DBoW2/DBoW2/FeatureVector.h"
+#include <DBoW2/BowVector.h>
+#include <DBoW2/FeatureVector.h>
 
-#include "Thirdparty/Sophus/sophus/geometry.hpp"
+#include <sophus/geometry.hpp>
 
 #include "ImuTypes.h"
 #include "ORBVocabulary.h"
@@ -37,7 +37,7 @@
 #include <opencv2/opencv.hpp>
 
 #include "Eigen/Core"
-#include "sophus/se3.hpp"
+#include <sophus/se3.hpp>
 
 namespace ORB_SLAM3
 {

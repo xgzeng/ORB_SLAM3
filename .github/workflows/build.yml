@@ -1,0 +1,31 @@
+name: Build ORB_SLAM3
+
+on:
+  push:
+    branches: [ main, master ]
+
+jobs:
+  build:
+    strategy:
+      matrix:
+        preset: [debug]
+
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v4
+    - run: sudo apt-get update
+
+    - name: Install Pangolin dependencies
+      run: sudo apt-get install -y
+          libglew-dev libepoxy-dev libeigen3-dev
+          python3-dev python3-setuptools python3-wheel
+
+    - name: Install ORB_SLAM3 dependencies
+      run: sudo apt-get install -y
+        libopencv-dev libssl-dev libboost-serialization-dev
+
+    - name: Build ORB_SLAM3
+      run: |
+        cmake --preset ${{ matrix.preset }}
+        cmake --build --preset ${{ matrix.preset }}

@@ -22,9 +22,9 @@
 #include "Map.h"
 #include "MapPoint.h"
 #include "KeyFrame.h"
-#include "GeometricCamera.h"
-#include "Pinhole.h"
-#include "KannalaBrandt8.h"
+#include "CameraModels/GeometricCamera.h"
+#include "CameraModels/Pinhole.h"
+#include "CameraModels/KannalaBrandt8.h"
 
 #include <set>
 #include <mutex>
@@ -35,13 +35,7 @@
 namespace ORB_SLAM3
 {
 class Viewer;
-class Map;
-class MapPoint;
-class KeyFrame;
 class KeyFrameDatabase;
-class Frame;
-class KannalaBrandt8;
-class Pinhole;
 
 //BOOST_CLASS_EXPORT_GUID(Pinhole, "Pinhole")
 //BOOST_CLASS_EXPORT_GUID(KannalaBrandt8, "KannalaBrandt8")
